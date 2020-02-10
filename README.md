@@ -91,6 +91,7 @@ Specific to VM to be deployed:
 | vm_extradisk_size_gb2    | Number in GB for extra disk             | *None*             |
 
 :wave: :warning: Repeat every `vm_eth0_ip' times the amount of network interfaces (by default you need to setup eth0 and eth1 vars)
+
 :wave: :warning: By default it will suport 4 disks (1 for OS plus 3 for DATA) and you will need to fill accordingly in your inventory `vm_extradisk_size_gbX`, but only declare the ones you need to. It will create the ones that you declare only (up to a total of 4, by default)
 
 **Big Note:** if you need to, I would suggest to edit the code to have defaults or even better... just create groups at inventory and setup a var for a specific group. e.g.: Datacenter
