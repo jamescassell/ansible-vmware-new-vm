@@ -1,0 +1,25 @@
+---
+vcenter_validate_certs: False
+
+vm_ram: 2048
+vm_num_cpus: 2
+vm_vcenter_net_connected: False
+
+vm_extradisk_size_gb2: ''
+vm_extradisk_size_gb3: ''
+vm_extradisk_size_gb4: ''
+# Repeat logic if case of add/remove disks
+
+disk_dict:
+  - size_gb: "{{ vm_extradisk_size_gb2 }}"
+    type: thin
+    datastore: "{{ vm_disk_datastore }}"
+  - size_gb: "{{ vm_extradisk_size_gb3 }}"
+    type: thin
+    datastore: "{{ vm_disk_datastore }}"
+  - size_gb: "{{ vm_extradisk_size_gb4 }}"
+    type: thin
+    datastore: "{{ vm_disk_datastore }}"
+  
+  # Repeat logic if case of add/remove disks
+  

@@ -1,0 +1,2 @@
+---
+disk: "{{ lookup ('template', 'disks.yml.j2')| from_yaml }}"

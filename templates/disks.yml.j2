@@ -1,0 +1,11 @@
+disks:
+  - size_gb: 25
+    type: thin
+    datastore: {{ vm_disk_datastore }}
+{% for disk_num in disk_dict %}
+  {% if disk_num.size_gb != '' -%}
+  - size_gb: {{ disk_num.size_gb }}
+    type: thin
+    datastore: {{ disk_num.datastore }}
+{% endif %}
+{% endfor %}
